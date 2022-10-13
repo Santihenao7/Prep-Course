@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>PRUEBA PIEDRA PAPEL TIJERA</title>
+    <script>
+      function aleatorio(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
+      let nombre = "";
+      nombre = prompt("ESCRIBE CUAL ES TU NOMBRE");
+      alert("BIENVENIDO " + nombre);
+
+      let jugador = 0;
+      let maquina = aleatorio(1, 3);
+      jugador = prompt("ELIGE 1 PARA PIEDRA: 2 PARA PAPEL: 3 PARA TIJERAS");
+      // 1 piedra 2 papel 3 tijeras
+      if (jugador == 1) {
+        alert("Elegiste piedra");
+      } else if (jugador == 2) {
+        alert("Elegiste papel");
+      } else if (jugador == 3) {
+        alert("Elegiste tijera");
+      } else {
+        alert("PINCHE PENDEJO");
+      }
+
+      if (maquina == 1) {
+        alert("maquina elige piedra");
+      } else if (maquina == 2) {
+        alert("maquina elige papel");
+      } else if (maquina == 3) {
+        alert("maquina elige tijera");
+      } else {
+        alert("PINCHE PENDEJO");
+      }
+
+      if (jugador == maquina) {
+        alert("EMPATEEEEEE   🤷‍♀️🤷‍♀️🤷‍♀️");
+      } else if (jugador - maquina == 1 || jugador - maquina == -2) {
+        alert("GANASTEEEEEEE   😎🙌✔");
+      } else {
+        alert("PERDISTEEEEEEE   😢🤢🤦‍♂️");
+      }
+    </script>
+  </head>
+  <body>
+    <h1>JUEGO DE PIEDRA, PAPEL O TIJERAS</h1>
+    <p>DALE AL CTRL+R PARA VOLVER A EMPEZAR</p>
+  </body>
+</html>
